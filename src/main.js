@@ -6,6 +6,7 @@ import { createPinia } from "pinia";
 const pinia = createPinia();
 
 import router from "./router/index";
+import { MotionPlugin } from "@vueuse/motion";
 
 
-createApp(App).use(pinia).use(router).mount("#app");
+createApp(App).use(pinia).use(router).use(MotionPlugin).mount("#app");

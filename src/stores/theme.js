@@ -11,9 +11,9 @@ export const useThemeStore = defineStore("theme", () => {
   const dark_toggle = ref(false);
 
   const checkTheme = () => {
-    console.log(localStorage.getItem("theme"));
+    // console.log(localStorage.getItem("theme"));
     if (localStorage.getItem("theme") !== null) {
-      console.log(localStorage.getItem("theme"), "--if");
+      // console.log(localStorage.getItem("theme"), "--if");
 
       dark_toggle.value =
         localStorage.getItem("theme") === "true" ? true : false;
@@ -22,13 +22,13 @@ export const useThemeStore = defineStore("theme", () => {
   };
   const checkToggler = () => {
     dark_toggle.value = !dark_toggle.value;
-    console.log(dark_toggle.value);
+    // console.log(dark_toggle.value);
     localStorage.setItem("theme", dark_toggle.value);
-    console.log(localStorage.getItem("theme"));
+    // console.log(localStorage.getItem("theme"));
   };
 
   watch(dark_toggle, () => {
-    console.log("watcher", dark_toggle.value);
+    // console.log("watcher", dark_toggle.value);
 
     dark_toggle.value
       ? html.classList.add("dark")

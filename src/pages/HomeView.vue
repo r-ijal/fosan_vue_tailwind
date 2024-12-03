@@ -1,14 +1,21 @@
 <template>
   <!-- Navbar -->
+   <NavBar />
   <!-- Hero -->
+   <HeroSection />
   <!-- About -->
+    <AboutSection />
+
   <!-- What -->
   <!-- Partner -->
   <!-- Testimonies -->
   <!-- Join Now -->
   <!-- Footer -->
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
 </template>
 
-<script setup></script>
+<script setup>
+import NavBar from "../components/Home/NavBar.vue";
+import HeroSection from "../components/Home/HeroSection.vue";
+import AboutSection from "../components/Home/AboutSection.vue";
+</script>
 <style scoped></style>
