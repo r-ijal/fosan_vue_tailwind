@@ -1,12 +1,13 @@
 <template>
   <!-- Navbar -->
-   <NavBar />
+  <NavBar />
   <!-- Hero -->
-   <HeroSection />
+  <HeroSection />
   <!-- About -->
-    <AboutSection />
-
+  <AboutSection />
   <!-- What -->
+  <Syllabus />
+
   <!-- Partner -->
   <!-- Testimonies -->
   <!-- Join Now -->
@@ -17,5 +18,6 @@
 import NavBar from "../components/Home/NavBar.vue";
 import HeroSection from "../components/Home/HeroSection.vue";
 import AboutSection from "../components/Home/AboutSection.vue";
+import Syllabus from "../components/Home/Syllabus.vue";
 </script>
 <style scoped></style>

@@ -4,7 +4,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  @apply bg-bitdark
+  @apply bg-bitlight dark:bg-bitdark;
 }
 
 .navbar-fixed {
@@ -28,4 +28,12 @@ body {
 
 #dark-toggle:checked ~ label div.toggle-circle {
   @apply translate-x-3;
+}
+
+.section-title {
+  @apply font-bold font-serif text-secondary text-4xl mt-1 md:text-5xl dark:text-primary mb-4;
+}
+
+.section-subtitle {
+  @apply text-base font-semibold text-primary mb-5 lg:text-xl dark:text-secondary
 }
