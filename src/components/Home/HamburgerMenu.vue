@@ -28,13 +28,13 @@
         <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Why Us</a>
       </li>
       <li class="group">
-        <a href="#portofolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Syllabus</a>
+        <a href="#syllabus" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Syllabus</a>
       </li>
       <li class="group">
-        <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Clients</a>
+        <a href="#partners" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Partners</a>
       </li>
       <li class="group">
-        <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Testimonies</a>
+        <a href="#testimonies" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Testimonies</a>
       </li>
       <li class="group">
         <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Join Now</a>

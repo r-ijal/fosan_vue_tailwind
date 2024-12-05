@@ -4,7 +4,28 @@
 
 body {
   font-family: "Inter", sans-serif;
-  @apply bg-bitlight dark:bg-bitdark;
+}
+
+section:nth-child(even) {
+  @apply bg-lightone dark:bg-darkone text-bitdark dark:text-bitlight;
+}
+section:nth-child(odd) {
+  @apply bg-lighttwo dark:bg-darktwo text-bitdark dark:text-bitlight;
+}
+
+.about-bg {
+  background-image: url(/src/assets/bg_fosan1.jpeg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin-top: 6rem;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.about-ctx {
+  z-index: 3;
 }
 
 .navbar-fixed {
@@ -31,9 +52,9 @@ body {
 }
 
 .section-title {
-  @apply font-bold font-serif text-secondary text-4xl mt-1 md:text-5xl dark:text-primary mb-4;
+  @apply font-bold font-serif text-secondary text-4xl mt-1 md:text-5xl dark:text-lighttwo mb-4;
 }
 
 .section-subtitle {
-  @apply text-base font-semibold text-primary mb-5 lg:text-xl dark:text-secondary
+  @apply text-base font-semibold text-primary mb-5 dark:text-secondary
 }

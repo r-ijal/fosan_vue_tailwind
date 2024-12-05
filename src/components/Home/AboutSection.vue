@@ -1,6 +1,7 @@
 <template>
   <section id="about" class="pt-36 pb-16 h-screen flex justify-center dark:bg-bitlight">
-    <div class="w-full">
+    <div class="about-bg"></div>
+    <div class="about-ctx w-full">
       <div class="w-full h-full px-4">
         <div class="max-w-xl mx-auto text-center">
           <h1 class="section-title">Why Us</h1>
@@ -10,31 +11,7 @@
           </h2>
         </div>
 
-        <!-- <div class="grid grid-flow-col grid-cols-3 gap-8">
-          <div class="transform scale-75 -rotate-6">
-            <img
-              src="../../assets/About/FullStackCurriculum.png"
-              alt=""
-              loading="lazy"
-            />
-          </div>
-          <div class="transform scale-110">
-            <img
-              src="../../assets/About/HighLevels.png"
-              alt=""
-              loading="lazy"
-            />
-          </div>
-          <div class="transform scale-75 rotate-6">
-            <img
-              src="../../assets/About/Portofolio.png"
-              alt=""
-              loading="lazy"
-            />
-          </div>
-        </div> -->
-
-        <div id="carousel" class="relative w-5/6 h-[90%] mx-auto">
+        <div id="carousel" class="relative w-5/6 h-[90%] mx-auto mt-10">
           <div
             id="carousel-inner"
             class="relative h-[90%] flex items-center justify-center overflow-hidden"
@@ -53,14 +30,15 @@
                 :src="item.src"
                 :alt="item.caption"
                 class="rounded-lg w-60 object-cover"
+                @click="setIndex(index)"
               />
             </div>
 
             <div
               :class="[
-                'absolute transition-all duration-300 ease-in-out p-3 rounded-md mt-10',
+                'absolute transition-all duration-300 ease-in-out p-3 rounded-lg mt-20',
                 activeIndex === index
-                  ? 'opacity-100 bg-bitlight shadow-md'
+                  ? 'opacity-100 bg-lightone shadow-md dark:bg-darkone'
                   : 'opacity-20',
                 getClassText(index),
               ]"
@@ -71,7 +49,7 @@
                 {{ item.title }}
               </div>
               <div
-                class="text-center mt-2 mb-4 text-lg font-semibold dark:text-white"
+                class="text-center mt-2 mb-4 text-md font-semibold dark:text-lightone"
               >
                 {{ item.caption }}
               </div>
@@ -91,24 +69,6 @@
             <ChevronRightIcon class="size-6" />
           </button>
         </div>
-
-        <!-- <Carousel  class="flex justify-center items-center relative">
-          <CarouselSlide v-for="(item, index) in carouselItems" :key="index" class="absolute top-0 left-0 max-w-full">
-            <div>
-              <img :src="item.src" :alt="item.title" class="w-40 object-cover" />
-              <div
-                class="text-center mt-2 font-semibold"
-              >
-                {{ item.title }}
-              </div>
-              <div
-                class="text-center mt-2 text-sm"
-              >
-                {{ item.caption }}
-              </div>
-            </div>
-          </CarouselSlide>
-        </Carousel> -->
       </div>
     </div>
   </section>
@@ -189,6 +149,10 @@ const prev = () => {
   activeIndex.value =
     (activeIndex.value - 1 + totalItems.value) % totalItems.value;
 };
+
+const setIndex = (index) => {
+    activeIndex.value = index
+}
 
 const startAutoSlide = () => {
   interval = setInterval(next, 5000);

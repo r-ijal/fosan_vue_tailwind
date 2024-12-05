@@ -1,34 +1,3 @@
-<script setup>
-import { ref, reactive } from "vue";
-import JavascriptLogo from "../../assets/Logo/JavaScript-logo.png";
-import HTMLLogo from "../../assets/Logo/HTML5_logo.png";
-import CSSLogo from "../../assets/Logo/CSS3_logo.png";
-import NodeJSLogo from "../../assets/Logo/Node.js.png";
-import ExpressJSLogo from "../../assets/Logo/Expressjs.png";
-import VueJSLogo from "../../assets/Logo/Vue.js.png";
-const iconLogo = reactive([
-  {
-    name: "Javascript",
-    img: JavascriptLogo,
-    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  },
-  {
-    name: "HTML",
-    img: HTMLLogo,
-    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-  },
-  {
-    name: "CSS",
-    img: CSSLogo,
-    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-  },
-  { name: "NodeJS", img: NodeJSLogo, link: "https://nodejs.org/ene" },
-  { name: "ExpressJS", img: ExpressJSLogo, link: "https://expressjs.com/" },
-  { name: "VueJS", img: VueJSLogo, link: "https://vuejs.org/" },
-]);
-const iconClass = ref("mx-auto my-3 object-contain hover:scale-110");
-</script>
-
 <template>
   <section
     id="home"
@@ -65,7 +34,7 @@ const iconClass = ref("mx-auto my-3 object-contain hover:scale-110");
         </div>
 
         <div
-          class="w-full self-center px-4 lg:w-1/2"
+          class="w-full self-center px-4 lg:w-1/2 text-center sm:text-left"
           v-motion-fade-visible-once
         >
           <h1
@@ -73,7 +42,7 @@ const iconClass = ref("mx-auto my-3 object-contain hover:scale-110");
           >
             fosan.id
             <span
-              class="block font-bold font-serif text-secondary text-4xl mt-1 md:text-5xl dark:text-primary"
+              class="block font-bold font-serif text-secondary text-4xl mt-1 md:text-5xl dark:text-lightone"
             >
               Become a
               <span class="text-primary dark:text-secondary">
@@ -82,17 +51,8 @@ const iconClass = ref("mx-auto my-3 object-contain hover:scale-110");
               <!-- & Ready to Work -->
             </span>
           </h1>
-          <!-- <h2 class="font-medium text-primary text-lg mb-5 lg:text-2xl dark:text-secondary">
-            Javascript |
-            <span class="text-secondary dark:bitlight">NodeJS</span>
-            | ExpressJS |
-            <span class="text-secondary dark:bitlight">VueJS</span>
-            | HTML |
-            <span class="text-secondary dark:bitlight">CSS</span>
-        </h2> -->
-
           <div class="mb-5 flex justify-center">
-            <div class="grid grid-cols-3 sm:grid-cols-6 items-center justify-center">
+            <div class="grid grid-cols-4 items-center justify-center">
                 <a :href="icon.link" target="_blank" v-for="(icon, indexIcon) in iconLogo">
                   <img
                     :src="icon.img"
@@ -107,7 +67,7 @@ const iconClass = ref("mx-auto my-3 object-contain hover:scale-110");
           <p
             class="font-medium text-primary mb-10 leading-relaxed dark:text-secondary"
           >
-            <span class="text-secondary dark:text-white"
+            <span class="text-secondary dark:text-lightone"
               >Fosan Coding Academy</span
             >
             is a coding bootcamp in Semarang with an intensive program to become
@@ -117,7 +77,7 @@ const iconClass = ref("mx-auto my-3 object-contain hover:scale-110");
           </p>
 
           <a
-            href="#"
+            href="#contact"
             class="text-base font-semibold bg-primary py-3 px-8 text-white rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
           >
             Contact Us
@@ -128,4 +88,40 @@ const iconClass = ref("mx-auto my-3 object-contain hover:scale-110");
   </section>
 </template>
 
+<script setup>
+import { ref, reactive } from "vue";
+import JavascriptLogo from "../../assets/Logo/JavaScript-logo.png";
+import HTMLLogo from "../../assets/Logo/HTML5_logo.png";
+import CSSLogo from "../../assets/Logo/CSS3_logo.png";
+import NodeJSLogo from "../../assets/Logo/Node.js.png";
+import ExpressJSLogo from "../../assets/Logo/Expressjs.png";
+import VueJSLogo from "../../assets/Logo/Vue.js.png";
+import GolangLogo from "../../assets/Logo/Go_Logo.png";
+import PostgresqlLogo from "../../assets/Logo/Postgresql.png";
+
+const iconLogo = reactive([
+  {
+    name: "Javascript",
+    img: JavascriptLogo,
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    name: "HTML",
+    img: HTMLLogo,
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    name: "CSS",
+    img: CSSLogo,
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  { name: "NodeJS", img: NodeJSLogo, link: "https://nodejs.org/ene" },
+  { name: "ExpressJS", img: ExpressJSLogo, link: "https://expressjs.com/" },
+  { name: "VueJS", img: VueJSLogo, link: "https://vuejs.org/" },
+  { name: "Golang", img: GolangLogo, link: "https://go.dev/" },
+  { name: "Postgresql", img: PostgresqlLogo, link: "https://www.postgresql.org/" },
+]);
+
+const iconClass = ref("mx-auto my-3 object-contain hover:scale-110");
+</script>
 <style scoped></style>
