@@ -1,10 +1,12 @@
 <template>
-    <div class="slide">
-        <Transition>
+    <div class="list">
+        <!-- <Transition> -->
             <slot></slot>
-        </Transition>
+        <!-- </Transition> -->
     </div>
 </template>
 
 <script setup></script>
-<style scoped></style>
+<style scoped>
+
+</style>

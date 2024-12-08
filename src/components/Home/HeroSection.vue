@@ -53,15 +53,17 @@
           </h1>
           <div class="mb-5 flex justify-center">
             <div class="grid grid-cols-4 items-center justify-center">
-                <a :href="icon.link" target="_blank" v-for="(icon, indexIcon) in iconLogo">
-                  <img
-                    :src="icon.img"
-                    :alt="icon.name + 'Logo'"
-                    :class="
-                      [iconClass, icon.name === 'VueJS' ? 'h-14' : 'h-16']
-                    "
-                  />
-                </a>
+              <a
+                :href="icon.link"
+                target="_blank"
+                v-for="(icon, indexIcon) in iconLogo"
+              >
+                <img
+                  :src="icon.img"
+                  :alt="icon.name + 'Logo'"
+                  :class="[iconClass, icon.name === 'VueJS' ? 'h-14' : 'h-16']"
+                />
+              </a>
             </div>
           </div>
           <p
@@ -76,10 +78,7 @@
             are immediately job ready.
           </p>
 
-          <a
-            href="#contact"
-            class="text-base font-semibold bg-primary py-3 px-8 text-white rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
-          >
+          <a href="#contact" class="btn-one dark:btn-dark hover:scale-110">
             Contact Us
           </a>
         </div>
@@ -119,7 +118,11 @@ const iconLogo = reactive([
   { name: "ExpressJS", img: ExpressJSLogo, link: "https://expressjs.com/" },
   { name: "VueJS", img: VueJSLogo, link: "https://vuejs.org/" },
   { name: "Golang", img: GolangLogo, link: "https://go.dev/" },
-  { name: "Postgresql", img: PostgresqlLogo, link: "https://www.postgresql.org/" },
+  {
+    name: "Postgresql",
+    img: PostgresqlLogo,
+    link: "https://www.postgresql.org/",
+  },
 ]);
 
 const iconClass = ref("mx-auto my-3 object-contain hover:scale-110");

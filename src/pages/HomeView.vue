@@ -10,7 +10,9 @@
   <!-- Partner -->
    <Partner />
   <!-- Testimonies -->
+   <Testimonies />
   <!-- Join Now -->
+   <Contact />
   <!-- Footer -->
 </template>
 
@@ -20,5 +22,7 @@ import HeroSection from "../components/Home/HeroSection.vue";
 import AboutSection from "../components/Home/AboutSection.vue";
 import Syllabus from "../components/Home/Syllabus.vue";
 import Partner from "../components/Home/Partner.vue";
+import Testimonies from "../components/Home/Testimonies.vue";
+import Contact from "../components/Home/Contact.vue";
 </script>
 <style scoped></style>
