@@ -14,6 +14,7 @@
   <!-- Join Now -->
    <Contact />
   <!-- Footer -->
+   <Footer />
 </template>
 
 <script setup>
@@ -24,5 +25,6 @@ import Syllabus from "../components/Home/Syllabus.vue";
 import Partner from "../components/Home/Partner.vue";
 import Testimonies from "../components/Home/Testimonies.vue";
 import Contact from "../components/Home/Contact.vue";
+import Footer from "../components/Home/Footer.vue";
 </script>
 <style scoped></style>

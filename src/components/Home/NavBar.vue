@@ -5,7 +5,7 @@
       <div class="w-full">
         <div class="flex items-center justify-between relative">
           <div class="px-4">
-            <a href="#home" class="font-bold text-lg text-primary block py-6"
+            <a href="#home" class="font-bold text-lg text-primary block py-6 dark:text-secondary"
               >fosan.id</a
             >
           </div>
